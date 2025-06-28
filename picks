@@ -250,4 +250,8 @@ repopickchain 433625 # update_engine: Add static ota_extractor target
 # system/vold
 repopickchain 433641 # vold: Add support for ISO9660/UDF CD-ROM
 
+# extras i forgot the reason of
+repopick 433337
+repopickchain 435528
+
 wait
