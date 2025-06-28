@@ -1,6 +1,8 @@
 #!/bin/bash
 
 ANDROID_BUILD_TOP="$(dirname $(realpath "$0"))"
+CHECK="$(echo $1 | grep -q check && echo 1)"
+GERRIT_USERNAME="$(git config review.review.lineageos.org.username)"
 
 function repopick() {
         ${ANDROID_BUILD_TOP}/vendor/lineage/build/tools/repopick.py $@ &
@@ -250,8 +252,7 @@ repopickchain 433625 # update_engine: Add static ota_extractor target
 # system/vold
 repopickchain 433641 # vold: Add support for ISO9660/UDF CD-ROM
 
-# extras i forgot the reason of
-repopick 433337
-repopickchain 435528
+# hardware/lineage/compat
+repopick 435528 # compat: Provide libaudioroute-v35
 
 wait
