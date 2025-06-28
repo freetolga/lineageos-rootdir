@@ -3,7 +3,7 @@
 ANDROID_BUILD_TOP="$(dirname $(realpath "$0"))"
 
 function repopick() {
-        ${ANDROID_BUILD_TOP}/vendor/lineage/build/tools/repopick.py $@
+        ${ANDROID_BUILD_TOP}/vendor/lineage/build/tools/repopick.py $@ &
 }
 
 function repopickchain() {
